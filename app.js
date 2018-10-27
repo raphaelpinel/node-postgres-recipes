@@ -5,3 +5,8 @@ const express = require('express'),
       dust = require('dustjs-helpers'),
       pg = require('pg'),
       app = express();
+
+//Assign Dust Engine To .dust Files
+app.engine('dust', cons.dust);
+
+
