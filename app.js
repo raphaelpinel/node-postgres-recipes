@@ -16,5 +16,7 @@ app.set('views', __dirname + '/views');
 // Set public folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-//
+//Body Parser Middleware
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
