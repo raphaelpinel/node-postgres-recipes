@@ -9,4 +9,8 @@ const express = require('express'),
 //Assign Dust Engine To .dust Files
 app.engine('dust', cons.dust);
 
+// Set .dust as default extension
+app.set('view engine', 'dust');
+app.set('views', __dirname + '/views');
+
 
