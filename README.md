@@ -26,6 +26,10 @@ postgres -V
 
 run: psql postgres
 
+default user is 'postgres'
+Terminal:
+psql postgres
+
 enter: \du to check users intalled
 
 set new password:
@@ -35,6 +39,15 @@ CREATE ROLE patrick WITH LOGIN PASSWORD '**************';
 
 \q to exit
 
+ALTER ROLE patrick CREATEDB;
 
+//login
+psql postgres -U patrick
 
+postgres=> CREATE DATABASE base1;
+GRANT ALL PRIVILEGES ON DATABASE base1 TO patrick;
 
+\list: lists all the databases in Postgres
+\connect: connect to a specific database
+\dt: list the tables in the currently connected database
+\connect base1
