@@ -13,4 +13,8 @@ app.engine('dust', cons.dust);
 app.set('view engine', 'dust');
 app.set('views', __dirname + '/views');
 
+// Set public folder
+app.use(express.static(path.join(__dirname, 'public')));
+
+//
 
