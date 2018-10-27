@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 //Route
 app.get('/', function(req, res){
-    console.log('TEST');    
+    res.render('index');    
 });
 //Server
 app.listen(3000, function (){ 
