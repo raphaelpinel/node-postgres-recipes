@@ -20,3 +20,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
+//Route
+app.get('/', function(req, res){
+    console.log('TEST');    
+});
+//Server
+app.listen(3000, function (){ 
+    console.log('Server started on Port 3000');
+});
+
