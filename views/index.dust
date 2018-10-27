@@ -2,7 +2,16 @@
 
 {<body}
     {#recipes}
-        {name}
+        <div class="card card-block bg-faded p-3 align-middle">
+            <h5 class="align-middle">
+                {name}
+                <button class="btn btn-primary float-right" type="button" data-toggle="collapse" data-target="#recipe_{id}" aria-expanded="false" aria-controls="recipe_{id}"><i class="fas fa-caret-down"></i></button>
+            </h5>
+            <div class="collapse" id="recipe_{id}">
+                    
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+            </div>
+        </div>    
     {/recipes}
 
 {/body}

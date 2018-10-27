@@ -4,6 +4,9 @@ A recipe app built with Node.js and PostgreSQL
 following Brad Traversy's tutorial series on Youtube
 https://www.youtube.com/watch?v=EBw5E5DzAvE
 
+Run $ cd public/js
+$ browserify script.js > bundle.js
+
 Steps that I've done to install Postgresql on a Mac:
 - install postgresql with Homebrew by typing in terminal:
 brew update; brew install postgres
