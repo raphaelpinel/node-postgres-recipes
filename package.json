@@ -16,6 +16,15 @@
   ],
   "author": "Raphael Pinel",
   "license": "ISC",
+  "dependencies": {
+    "body-parser": "*",
+    "consolidate": "*",
+    "dust": "*",
+    "dustjs-helpers": "*",
+    "dustjs-linkedin": "*",
+    "express": "*",
+    "pg": "*"
+  },
   "bugs": {
     "url": "https://github.com/raphaelpinel/node-postgres-recipes/issues"
   },
