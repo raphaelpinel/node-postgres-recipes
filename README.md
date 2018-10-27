@@ -51,3 +51,9 @@ GRANT ALL PRIVILEGES ON DATABASE base1 TO patrick;
 \connect: connect to a specific database
 \dt: list the tables in the currently connected database
 \connect base1
+
+Default port number: 5432
+
+GRANT CONNECT ON DATABASE recipebookdb TO recipe;
+
+\d+ recipes
