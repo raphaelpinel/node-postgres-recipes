@@ -1,0 +1,23 @@
+{
+  "name": "recipebook",
+  "version": "1.0.0",
+  "description": "recipe manager",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raphaelpinel/node-postgres-recipes.git"
+  },
+  "keywords": [
+    "Postgresql",
+    "node.js"
+  ],
+  "author": "Raphael Pinel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raphaelpinel/node-postgres-recipes/issues"
+  },
+  "homepage": "https://github.com/raphaelpinel/node-postgres-recipes#readme"
+}
