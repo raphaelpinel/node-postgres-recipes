@@ -6,35 +6,47 @@ const express = require('express'),
       pg = require('pg'),
       app = express();
       
-      //Assign Dust Engine To .dust Files
-      app.engine('dust', cons.dust);
-      
-      // Set .dust as default extension
-      app.set('view engine', 'dust');
-      app.set('views', __dirname + '/views');
-      
-      // Set public folder
-      app.use(express.static(path.join(__dirname, 'public')));
-      
-      //Body Parser Middleware
-      app.use(bodyParser.json());
-      app.use(bodyParser.urlencoded({ extended: false }));
-      
-      //Route
-      app.get('/', function(req, res){
-          //res.render('index');   
-          // PG connect
-          const { Pool, Client } = require('pg')
-          const connectionString = "postgres://recipe:success@localhost/recipebookdb";
+//Assign Dust Engine To .dust Files
+app.engine('dust', cons.dust);
 
-          const pool = new Pool({
-            connectionString: connectionString,
-          })
+// Set .dust as default extension
+app.set('view engine', 'dust');
+app.set('views', __dirname + '/views');
 
+// Set public folder
+app.use(express.static(path.join(__dirname, 'public')));
+
+//Body Parser Middleware
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// PG connect
+const { Pool, Client } = require('pg')
+const connectionString = "postgres://recipe:success@localhost/recipebookdb";
+const pool = new Pool({
+connectionString: connectionString,
+})
+const client = new Client({
+    connectionString: connectionString,
+  })
+
+  
+//Route
+app.get('/', function(req, res){
+    //res.render('index');   
+    pool.connect();
     pool.query('SELECT * FROM recipes', (err, result) => {
     console.log(err, result);
     res.render('index', {recipes: result.rows});
-    pool.end();
+    // pool.end();
+    }) 
+});
+app.post('/add', function(req,res){
+    client.connect()
+    client.query('INSERT INTO recipes(name, ingredients, directions) VALUES($1, $2, $3)', [req.body.name, req.body.ingredients, req.body.directions], (err, result) => {
+    console.log(err, result);
+    res.redirect('/');
+    // client.end();
     }) 
 });
 //Server
