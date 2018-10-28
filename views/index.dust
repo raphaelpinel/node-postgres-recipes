@@ -11,9 +11,15 @@
                     <br/>
                     <br/>
                     <p><strong>Ingredients: </strong>
-                        <br/>{ingredients}</p>
+                        <br/>{ingredients}
+                    </p>
                     <p><strong>Instructions: </strong>
-                        <br/>{directions}</p>
+                        <br/>{directions}
+                    </p>
+                    <br/>
+                    <hr/>
+                    <button class="btn btn-secondary edit-recipe"><i class="far fa-edit"></i></button>
+                    <button class="btn btn-danger delete-recipe"><i class="fas fa-times"></i></button>
 
             </div>
         </div>    
