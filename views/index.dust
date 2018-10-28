@@ -1,12 +1,18 @@
 {>"layout" /}
 
 {<body}
+    <!-- Button to add recipe and open modal -->
+    <button type="button" class="btn btn-info btn-block" data-toggle="modal" data-target="#formModal">
+    Add recipe
+  </button>
+  <br />
     {#recipes}
         <div class="card card-block bg-faded p-3 align-middle">
             <h5 class="align-middle">
                 {name}
-                <button class="btn btn-primary float-right" type="button" data-toggle="collapse" data-target="#recipe_{id}" aria-expanded="false" aria-controls="recipe_{id}"><i class="fas fa-caret-down"></i></button>
+                <button class="btn btn-info float-right" type="button" data-toggle="collapse" data-target="#recipe_{id}" aria-expanded="false" aria-controls="recipe_{id}"><i class="fas fa-caret-down"></i></button>
             </h5>
+
             <div class="collapse" id="recipe_{id}">
                     <br/>
                     <br/>
@@ -22,7 +28,29 @@
                     <button class="btn btn-danger delete-recipe"><i class="fas fa-times"></i></button>
 
             </div>
-        </div>    
+        </div>   
+        <br /> 
     {/recipes}
+
+    <!-- Modal -->
+<div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="formModalLabel">Add Recipe</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-info">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 {/body}
