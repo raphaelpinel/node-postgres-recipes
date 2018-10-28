@@ -17,10 +17,10 @@
                     <br/>
                     <br/>
                     <p><strong>Ingredients: </strong>
-                        <br/>{ingredients}
+                        <br/><pre>{ingredients}</pre>
                     </p>
                     <p><strong>Instructions: </strong>
-                        <br/>{directions}
+                        <br/><pre>{directions}</pre>
                     </p>
                     <br/>
                     <hr/>
@@ -59,11 +59,15 @@
                     </div>
                     <div class="form-group">
                             <label for="name">Ingredients</label>
-                            <textarea class="form-control" name="ingredients" id="ingredients" rows="6"></textarea>
+                            <pre>
+                                <textarea class="form-control" name="ingredients" id="ingredients" rows="6"></textarea>
+                            </pre>
                     </div>
                     <div class="form-group">
                             <label for="name">Directions</label>
-                            <textarea class="form-control" name="directions" id="directions" rows="6"></textarea>
+                            <pre>
+                                <textarea class="form-control" name="directions" id="directions" rows="6"></textarea>
+                            </pre>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -94,11 +98,15 @@
                         </div>
                         <div class="form-group">
                                 <label for="name">Ingredients</label>
-                                <textarea class="form-control" name="ingredients" id="edit-form-ingredients" rows="6"></textarea>
+                                <pre>
+                                    <textarea class="form-control" name="ingredients" id="edit-form-ingredients" rows="6"></textarea>
+                                </pre>
                         </div>
                         <div class="form-group">
                                 <label for="name">Directions</label>
-                                <textarea class="form-control" name="directions" id="edit-form-directions" rows="6"></textarea>
+                                <pre>
+                                    <textarea class="form-control" name="directions" id="edit-form-directions" rows="6"></textarea>
+                                </pre>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -108,6 +116,6 @@
                 </form>
           </div>
         </div>
-    </div>
+</div>
 
 {/body}
