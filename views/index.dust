@@ -36,19 +36,32 @@
 <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="formModalLabel">Add Recipe</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-info">Save changes</button>
-        </div>
+          <form method="POST" action="/add">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="formModalLabel">Add Recipe</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                            <label for="name">Recipe Name</label>
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Enter recipe name">
+                    </div>
+                    <div class="form-group">
+                            <label for="name">Ingredients</label>
+                            <textarea class="form-control" name="ingredients" id="ingredients" rows="6"></textarea>
+                    </div>
+                    <div class="form-group">
+                            <label for="name">Instructions</label>
+                            <textarea class="form-control" name="instructions" id="instructions" rows="6"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <input type="submit" class="btn btn-info" value="Save"/>
+                </div>
+            </form>
       </div>
     </div>
   </div>
