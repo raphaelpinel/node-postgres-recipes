@@ -16855,6 +16855,6 @@ return Popper;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{}],4:[function(require,module,exports){
-//window.$ = window.jQuery = require('jquery'); // not sure if you need this at all
+window.$ = window.jQuery = require('jquery'); // not sure if you need this at all
 window.Bootstrap = require('bootstrap');
-},{"bootstrap":1}]},{},[4]);
+},{"bootstrap":1,"jquery":2}]},{},[4]);
