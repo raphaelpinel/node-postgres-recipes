@@ -35,7 +35,7 @@ const client = new Client({
 app.get('/', function(req, res){
     //res.render('index');   
     pool.connect();
-    pool.query('SELECT * FROM recipes', (err, result) => {
+    pool.query('SELECT * FROM recipes ORDER BY id DESC', (err, result) => {
     console.log(err, result);
     res.render('index', {recipes: result.rows});
     // pool.end();
