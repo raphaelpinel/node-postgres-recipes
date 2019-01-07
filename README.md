@@ -10,8 +10,13 @@ type in your terminal:
 cd public/js browserify script.js > bundle.js
 cd ..
 cd ..
-node App
+npm start
 ```
+
+Technologies used: node.js with express,
+dust as a template engine,
+bootstrap for styling,
+postgresql as a database
 
 You also need to setup your postgres database and setup your environment variables for connecting to the database.
 You can greate your own dbconnect.js file

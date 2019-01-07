@@ -4,6 +4,7 @@
   "description": "recipe manager",
   "main": "app.js",
   "scripts": {
+    "start": "nodemon App.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,14 +19,15 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "*",
+    "bootstrap": "^4.1.3",
     "consolidate": "*",
     "dust": "*",
     "dustjs-helpers": "*",
     "dustjs-linkedin": "*",
     "express": "*",
-    "pg": "*",
-    "bootstrap": "^4.1.3",
     "jquery": "^3.3.1",
+    "nodemon": "^1.18.9",
+    "pg": "*",
     "popper.js": "^1.14.3"
   },
   "bugs": {
